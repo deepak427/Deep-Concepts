@@ -1,0 +1,11 @@
+{
+  "name": "Validate on Save",
+  "description": "Check for TypeScript errors when saving React/TS files",
+  "trigger": {
+    "type": "onSave",
+    "filePattern": "**/*.{ts,tsx}"
+  },
+  "prompt": "Check for TypeScript errors and ensure code follows project standards. Fix critical issues only.",
+  "autoRun": false,
+  "enabled": true
+}

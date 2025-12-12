@@ -1,0 +1,10 @@
+{
+  "name": "Update README",
+  "description": "Manually trigger README update based on current project state",
+  "trigger": {
+    "type": "manual"
+  },
+  "prompt": "Review the entire project structure, dependencies, and features. Update README.md to accurately reflect the current state. Use the #readme-maintenance steering guide. Keep it concise and technical.",
+  "autoRun": false,
+  "enabled": true
+}

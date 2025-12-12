@@ -1,5 +1,14 @@
+// Legacy constants file - maintained for backward compatibility
+// New code should import from constants/modules.ts instead
+
 import { ModuleData } from './types';
 
+// Re-export from the new module structure
+export { MODULE_CONTENT, getModuleContent, getRequiredInteractions, getModuleChallenges, getRetrievalQuestions, ACHIEVEMENT_CONDITIONS } from './constants/modules';
+export { XP_REWARDS } from './lib/xpSystem';
+export type { ModuleContent, RetrievalQuestion, InteractiveSimulation, Challenge } from './constants/modules';
+
+// Legacy MODULES export for backward compatibility
 export const MODULES: ModuleData[] = [
   {
     id: 'intro',

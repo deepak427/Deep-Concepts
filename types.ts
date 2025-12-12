@@ -20,6 +20,7 @@ export interface QuizData {
   options: QuizOption[];
 }
 
+// Legacy interface for backward compatibility
 export interface ModuleData {
   id: ModuleId;
   title: string;

@@ -1,0 +1,95 @@
+/* Accessibility Styles */
+
+/* Focus indicators for all interactive elements */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast focus for buttons */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size on mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+
+.skip-to-main:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ensure sufficient color contrast */
+.text-gray-600 {
+  color: #4b5563; /* WCAG AA compliant */
+}
+
+.text-gray-500 {
+  color: #6b7280; /* WCAG AA compliant on white */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button,
+  a {
+    border: 2px solid currentColor;
+  }
+  
+  .border {
+    border-width: 2px;
+  }
+}
+
+/* Focus within for container elements */
+.focus-within\:ring:focus-within {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
