@@ -23,4 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
+# Kiro IDE files
+.kiro/
+
+# Development files
+*.test.ts
+*.test.tsx
+error.log
+
+# Documentation (keep only essential)
+docs/
+README.md
+
 
