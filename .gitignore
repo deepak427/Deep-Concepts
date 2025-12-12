@@ -31,8 +31,4 @@ dist-ssr
 *.test.tsx
 error.log
 
-# Documentation (keep only essential)
-docs/
-README.md
-
 
